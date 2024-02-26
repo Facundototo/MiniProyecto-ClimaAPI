@@ -5,24 +5,31 @@
 
 > **_Practica en React y API (SOLO GET)_**
 
+---
+
 #### --- Vista Previa ---
 
 **_Mas adelante cuando haga el diseño_**
 
+---
+
 #### --- Cosas que me faltan para el climaAPI ---
 
 - [ ] Hacer a traves de la busqueda unas cards y que pueda clickear la ciudad que quiera.
-- [ ] Encontrar una forma de no mostrar las ciudades repetidas.
+- [x] Encontrar una forma de no mostrar las ciudades repetidas.
 - [ ] Hacer **diseño** (CSS).
 - [ ] Mostrar bien los datos sacados de la API.
-
-#### --- Errores que siento que cometí en el proyecto ---
 
 ---
 
 ### --- Commits ---
 
 > Del actual al antiguo
+
+| **'solucion repetir ciudad y logica terminada'** - Fecha 26/02 |
+
+- Termine la logica de lo que masomenos se va a tratar la pagina, solo faltaria hacer el diseño y mostrar la info obviamente.
+- Solucione lo de que no se repitan las ciudades cuando se busca, igual no se repiten el tema es que la API te da diferentes coordenadas de esa ciudad.
 
 | **'cambio de idea/diseño'** - Fecha 25/02 |
 

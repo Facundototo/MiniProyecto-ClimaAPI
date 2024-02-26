@@ -1,24 +1,22 @@
 import React from "react";
 
-function CardCiudad({ciudad,pais}){
+function CardCiudad({onClick,opcion}){
     return(
-        <div>
-            <h2>{ciudad}</h2>
-            <h4>{pais}</h4>
+        <div onClick={() => onClick(opcion)}>
+            <h2>{opcion.name}</h2>
+            <h4>{opcion.country}</h4>
         </div>
     )
 }
 
-export default function ListaCiudades({opciones}){
+export default function ListaCiudades({elegirCiudad,opciones}){
     return(
         <>
             {opciones.map((opcion,index) => (            
-                <CardCiudad 
-                    name="buscar-ciudad" 
-                    type="submit" 
+                <CardCiudad
+                    onClick={ciudad => elegirCiudad(ciudad)}
                     key={index}
-                    ciudad={opcion.name}
-                    pais={opcion.country}
+                    opcion={opcion}
                 />
             ))}
         </>

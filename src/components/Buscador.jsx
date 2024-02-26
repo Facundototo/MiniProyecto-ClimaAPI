@@ -4,36 +4,43 @@ import ListaCiudades from "./ListaCiudades";
 
 export default function Buscador({setCoords}){
 
-    const [opciones,setOpciones] = useState([]);
-    const [valorInput,setValorInput] = useState('');
+    const [opciones,setOpciones] = useState([]);        //Estado para las opciones de busqueda.
+    const [valorInput,setValorInput] = useState('');        //Estado para lo que escribe el usuario, en eso se basan las opciones.
 
-    const handleSubmitCiudad = async (e) => {
-        e.preventDefault();     //Para que no se envie el form.
-
-        valorBoton = e.target.querySelector('button').value;    //Hacer un div que tenga por separado el pais asi es mas facil, mejor hacerlo en otro componente.
-
-        const URL_GEO = `http://api.openweathermap.org/geo/1.0/direct?q=${valorInput}&limit=5&appid=${API_KEY}`;
-        const data = await getDatosJSON(URL_GEO);
-        setCoords({lat:data[0].lat,lon:data[0].lon});       //Seteo el estado de App latitud y longitud.
+    const handleEleccionCiudad = (ciudadElegida) => {
+        setCoords({     //Seteo el estado de App latitud y longitud.
+            lat:ciudadElegida.lat,  
+            lon:ciudadElegida.lon,
+            ciudad:ciudadElegida.name       //Cree este atributo porque la api cuando rastrea las coords me tira el nombre de una localidad de esa ciudad, yo quiero que me tire el de la ciudad.
+        });       
     }
 
     useEffect(() => {
-        async function filtrarBusqueda() {
-            if(valorInput){
+        if(valorInput){
+            async function filtrarBusqueda() {
                 const URL_GEO = `http://api.openweathermap.org/geo/1.0/direct?q=${valorInput}&limit=4&appid=${API_KEY}`;  
                 const data = await getDatosJSON(URL_GEO);
-                setOpciones(data);
+                
+                const atrVistos = new Set();        //Con el Set chequeo que las ciudades no se repitan.
+                const opcionesNoRepetidas = data.filter((opcion) => {
+                    const clave = `${opcion.name}-${opcion.country}`;       //La API no se repite igual pero te busca diferentes coords dentro de la ciudad y no quiero eso.
+                    if(atrVistos.has(clave)){
+                        return false;
+                    }else{
+                        atrVistos.add(clave);
+                        return true;
+                    }
+                });
+                setOpciones(opcionesNoRepetidas);
             }
+            filtrarBusqueda();
         }
-        filtrarBusqueda();
     },[valorInput])
 
     return(
         <div>
-            <form action="submit" name="buscar-ciudad" onSubmit={(e) => handleSubmitCiudad(e)}>
-                <input type="text" list="lista-ciudad" placeholder="Busca una ciudad" onChange={(e) => setValorInput(e.target.value)}/>
-                <ListaCiudades opciones={opciones}/>
-            </form>
+            <input name="input-busqueda" type="text" placeholder="Busca una ciudad" onChange={(e) => setValorInput(e.target.value)}/>
+            <ListaCiudades elegirCiudad={handleEleccionCiudad} opciones={opciones}/>
         </div>
     )
 }

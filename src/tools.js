@@ -2,10 +2,10 @@ import {REACT_API_KEY} from '../key.js'
 
 export const API_KEY = REACT_API_KEY;
 
-export function getDatosObjeto(json){       //Arme un objeto que guarda solo los datos que me interesan de la API para despues mostrarlos.
+export function getDatosObjeto(json,nombre){       //Arme un objeto que guarda solo los datos que me interesan de la API para despues mostrarlos.
     console.log(json);
     return {                
-        ciudad: json.name,
+        ciudad: nombre,
         pais: json.sys.country,
         clima: {
             main: json.weather[0].main,
