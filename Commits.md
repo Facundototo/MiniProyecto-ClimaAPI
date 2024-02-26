@@ -2,6 +2,10 @@
 
 > Del actual al antiguo
 
+| **'comenzando a diseñar'** - Fecha 26/02 |
+
+- Diseñe el Buscador y ListaCiudades.
+
 | **'solucion repetir ciudad y logica terminada'** - Fecha 26/02 |
 
 - Termine la logica de lo que masomenos se va a tratar la pagina, solo faltaria hacer el diseño y mostrar la info obviamente.

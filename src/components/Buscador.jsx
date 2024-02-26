@@ -1,6 +1,7 @@
 import React, { useEffect,useState } from "react";
 import { getDatosJSON,API_KEY } from "../tools";
 import ListaCiudades from "./ListaCiudades";
+import './Buscador.css'
 
 export default function Buscador({setCoords}){
 
@@ -38,7 +39,7 @@ export default function Buscador({setCoords}){
     },[valorInput])
 
     return(
-        <div>
+        <div className="containerBusqueda">
             <input name="input-busqueda" type="text" placeholder="Busca una ciudad" onChange={(e) => setValorInput(e.target.value)}/>
             <ListaCiudades elegirCiudad={handleEleccionCiudad} opciones={opciones}/>
         </div>

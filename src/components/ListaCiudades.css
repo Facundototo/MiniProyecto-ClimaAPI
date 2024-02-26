@@ -1,0 +1,32 @@
+.containerCiudades{
+    margin-top: 40px;
+    display: flex;
+    gap: 40px;
+}
+
+.containerCiudad{
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(190, 87, 87);
+    border-radius: 5px;
+    width: 200px;
+    height: 100px;
+}
+
+.containerCiudad:hover{
+    transition: 250ms ease;
+    transform: scale(1.15);
+    background-color: rgb(229, 81, 81);
+}
+.containerCiudad:not(:hover){
+    transition: 250ms ease;
+}
+
+.containerCiudad:active{
+    background-color: rgb(250, 126, 126);
+    transform: scale(1.1);
+}

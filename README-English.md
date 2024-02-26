@@ -52,7 +52,7 @@ npm run dev
 
 ---
 
-##Commits
+## Commits
 
 The tracking of what I was doing in each commit is within this [file](https://github.com/Facundototo/MiniProyecto-ClimaAPI/blob/main/Commits.md)
 

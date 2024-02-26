@@ -1,8 +1,9 @@
 import React from "react";
+import './ListaCiudades.css'
 
 function CardCiudad({onClick,opcion}){
     return(
-        <div onClick={() => onClick(opcion)}>
+        <div className="containerCiudad" onClick={() => onClick(opcion)}>
             <h2>{opcion.name}</h2>
             <h4>{opcion.country}</h4>
         </div>
@@ -11,7 +12,7 @@ function CardCiudad({onClick,opcion}){
 
 export default function ListaCiudades({elegirCiudad,opciones}){
     return(
-        <>
+        <div className="containerCiudades">
             {opciones.map((opcion,index) => (            
                 <CardCiudad
                     onClick={ciudad => elegirCiudad(ciudad)}
@@ -19,6 +20,6 @@ export default function ListaCiudades({elegirCiudad,opciones}){
                     opcion={opcion}
                 />
             ))}
-        </>
+        </div>
     )
 }
