@@ -1,4 +1,4 @@
-import {REACT_API_KEY} from '../key.js'
+import {REACT_API_KEY} from './key.js'
 
 export const API_KEY = REACT_API_KEY;
 

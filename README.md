@@ -1,19 +1,51 @@
-## Mini-Proyecto - ClimaAPI - 2024
+# Mini-Proyecto - ClimaAPI - 2024
 
-> [!NOTE]
-> _El codigo esta comentado de explicaciones._
+> [_README IN ENGLISH_](https://github.com/Facundototo/MiniProyecto-ClimaAPI/blob/main/README-English.md)
 
-> **_Practica en React y API (SOLO GET)_**
+## Pagina que te permite buscar la ciudad que quieras, y esta te informa de los datos meteorologicos actuales de la misma.
+
+Este proyecto lo hice para practicar la conexion con un agente externo a mi web, en este caso, es una API que a traves del metodo GET te da los datos meteorologicos actuales de la ciudad que quieras. Tambien para practicar con el hook useEffect. La API se llama [OpenWeather](https://openweathermap.org/) y tiene diferentes servicios. Para esta pagina utilice 2 servicios **gratuitos** que se complementan entre si (ademas la API te recomienda que los uses juntos):
+
+- El primer servicio es [GeoCoding API](https://openweathermap.org/api/geocoding-api). Me sirvio para que me retorne a traves de la busqueda del usuario las coordenadas (latitud y longitud) de la ciudad.
+- El segundo servicio es [Current Weather Data](https://openweathermap.org/current), este necesita las coordenadas de la ciudad para darte las condiciones meteorologicas de la zona.
+
+Estos 2 servicios me eran necesarios usarlos ya que uno me da las coordenadas a traves del nombre de la ciudad para que el otro me de los datos meteorologicos.
+
+### Idea Grafica
+
+**Como funciona mi pagina en terminos generales:**
+
+![IdeaClimaAPI](IdeaClimaAPI.png)
 
 ---
 
-#### --- Vista Previa ---
+## Vista Previa
 
 **_Mas adelante cuando haga el diseño_**
 
 ---
 
-#### --- Cosas que me faltan para el climaAPI ---
+### Como usar esta pagina
+
+- Instalar [Node](https://nodejs.org/en) y [Git](https://git-scm.com/downloads).
+- Clonar este repositorio en una terminal:
+
+```
+git clone https://github.com/Facundototo/MiniProyecto-ClimaAPI.git
+```
+
+- Meterse en la carpeta raiz del proyecto e iniciar la pagina:
+
+```
+cd clima-api-react
+npm run dev
+```
+
+- Te va a dar un link, copialo en la web y listo.
+
+---
+
+## Cosas que me faltan para terminar
 
 - [ ] Hacer a traves de la busqueda unas cards y que pueda clickear la ciudad que quiera.
 - [x] Encontrar una forma de no mostrar las ciudades repetidas.
@@ -22,31 +54,8 @@
 
 ---
 
-### --- Commits ---
+## Commits
 
-> Del actual al antiguo
-
-| **'solucion repetir ciudad y logica terminada'** - Fecha 26/02 |
-
-- Termine la logica de lo que masomenos se va a tratar la pagina, solo faltaria hacer el diseño y mostrar la info obviamente.
-- Solucione lo de que no se repitan las ciudades cuando se busca, igual no se repiten el tema es que la API te da diferentes coordenadas de esa ciudad.
-
-| **'cambio de idea/diseño'** - Fecha 25/02 |
-
-- Pense en hacerlo para que quede mejor, en vez de un datalist que salgan una serie de ciudades con cards, la logica igual de antes es igual.
-- No hice mucho hoy pero masomenos deje las bases de la idea, cree los componentes ListaCiudades y CardCiudad (ListaCiudades.jsx).
-- Solucione un problema que tuve ayer con el manejo del useEffect en el componente Buscador.
-
-| **'busqueda por datalist y API_KEY'** - Fecha 24/02 |
-
-- Empece a hacer la logica de la busqueda por datalist, ya casi la termino.
-- Oculte la API_KEY en otro archivo, porque me salio un aviso del git guardian avisandome.
-- Cree el componente InfoClima para mostrar la info de la ciudad buscada.
-
-| **'fetch a las APIs'** - Fecha 23/02 |
-
-- Hice el fetch a las 2 APIs GeoCoding y Current Weather, la primera para buscar por nombre la ciudad y que me de las coordenadas. La segunda para que me de los datos meteorologicos de la ciudad, a traves de las coordenadas que me dio la primer API.
-- Hice el buscador para escribir la ciudad y buscarla, despues para chequear hice que me retorne el nombre pero anda medio mal, lo tengo que ver.
-- Cree el componente Buscador y el archivo tools.js, me queda mas limpio los componentes asi.
+El seguimiento de lo que fui haciendo en cada commit esta dentro de este [archivo](https://github.com/Facundototo/MiniProyecto-ClimaAPI/blob/main/Commits.md)
 
 ---
