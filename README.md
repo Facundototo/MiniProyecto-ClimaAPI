@@ -37,7 +37,7 @@ git clone https://github.com/Facundototo/MiniProyecto-ClimaAPI.git
 - Meterse en la carpeta raiz del proyecto e iniciar la pagina:
 
 ```
-cd clima-api-react
+cd <carpeta-raiz>
 npm run dev
 ```
 
@@ -47,10 +47,10 @@ npm run dev
 
 ## Cosas que me faltan para terminar
 
-- [ ] Hacer a traves de la busqueda unas cards y que pueda clickear la ciudad que quiera.
+- [x] Hacer a traves de la busqueda unas cards y que pueda clickear la ciudad que quiera.
 - [x] Encontrar una forma de no mostrar las ciudades repetidas.
-- [ ] Hacer **diseño** (CSS).
-- [ ] Mostrar bien los datos sacados de la API.
+- [x] Hacer **diseño** (CSS).
+- [x] Mostrar bien los datos sacados de la API.
 
 ---
 

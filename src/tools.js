@@ -3,7 +3,6 @@ import {REACT_API_KEY} from './key.js'
 export const API_KEY = REACT_API_KEY;
 
 export function getDatosObjeto(json,nombre){       //Arme un objeto que guarda solo los datos que me interesan de la API para despues mostrarlos.
-    console.log(json);
     return {                
         ciudad: nombre,
         pais: json.sys.country,
@@ -13,11 +12,11 @@ export function getDatosObjeto(json,nombre){       //Arme un objeto que guarda s
         },
         main:{
             temp: {
-                normal: `${json.main.temp}C°`,
-                max: `${json.main.temp_max}C°`,
-                min: `${json.main.temp_min}C°`,
+                normal: `${json.main.temp} C°`,
+                max: `${json.main.temp_max} C°`,
+                min: `${json.main.temp_min} C°`,
+                sensacion: `${json.main.feels_like} C°`,
             },
-            sensacion: `${json.main.feels_like}C°`,
             humedad: `${json.main.humidity}%`,
             velocidadViento: `${json.wind.speed} m/s`,
             nubes: `${json.clouds.all}%`

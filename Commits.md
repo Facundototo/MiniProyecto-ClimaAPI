@@ -2,6 +2,11 @@
 
 > Del actual al antiguo
 
+| **'termine el diseño de la pagina, es simple'** - Fecha 27/02 |
+
+- Termine de diseñar la pagina, no es para tanto, pero muestra bien los datos.
+- Complete todos los objetivos que tenia para este mini-proyecto, estaban todos muy relacionados con el diseño.
+
 | **'comenzando a diseñar'** - Fecha 26/02 |
 
 - Diseñe el Buscador y ListaCiudades.
