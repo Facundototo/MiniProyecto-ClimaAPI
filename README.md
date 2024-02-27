@@ -21,7 +21,7 @@ Estos 2 servicios me eran necesarios usarlos ya que uno me da las coordenadas a 
 
 ## Vista Previa
 
-**_Mas adelante cuando haga el diseño_**
+![vistaPrevia](vistaPrevia.PNG)
 
 ---
 

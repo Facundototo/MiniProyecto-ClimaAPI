@@ -19,7 +19,7 @@ I did this project to practice the connection with an agent external to my websi
 
 ## Preview
 
-**_Later when I make the design_**
+![vistaPrevia](vistaPrevia.PNG)
 
 ---
 

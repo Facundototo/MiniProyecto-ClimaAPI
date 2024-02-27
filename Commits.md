@@ -2,10 +2,11 @@
 
 > Del actual al antiguo
 
-| **'termine el diseño de la pagina, es simple'** - Fecha 27/02 |
+| **'termine el diseño de la pagina,simple'** - Fecha 27/02 |
 
 - Termine de diseñar la pagina, no es para tanto, pero muestra bien los datos.
 - Complete todos los objetivos que tenia para este mini-proyecto, estaban todos muy relacionados con el diseño.
+- Subo la vista previa de la pagina al README.
 
 | **'comenzando a diseñar'** - Fecha 26/02 |
 
